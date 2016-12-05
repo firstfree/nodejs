@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1= title
+    hr
+    form(method="post")
+        fieldset
+            legend INSERT DATA
+            table
+                tr
+                    td
+                        label Name
+                    td
+                        input(type="text", name="name")
+                tr
+                    td
+                        label Model Number
+                    td
+                        input(type="text", name="modelnumber")
+                tr
+                    td
+                        label Series
+                    td
+                        input(type="text", name="series")
+            input(type="submit")

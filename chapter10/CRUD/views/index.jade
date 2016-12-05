@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1= title
+  a(href="/insert") INSERT DATA
+  hr
+  table(width="100%", border="1")
+    thead
+      tr
+        th REMOVE
+        th EDIT
+        th ID
+        th Name
+        th Model Number
+        th Series
+    tbody
+      - data.forEach(function(item, index) {
+        tr
+          td
+            a(href="/remove/#{item.id}") REMOVE
+          td
+            a(href="/edit/#{item.id}") EDIT
+          td= item.id
+          td= item.name
+          td= item.modelnumber
+          td= item.series
+      - })
