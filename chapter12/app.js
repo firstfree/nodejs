@@ -21,13 +21,13 @@ var seats = [
 var app = express();
 var server = http.createServer(app);
 
-app.get('/', function(req, res, next) {
-    fs.readFile('HTMLPage.html', function(err, data) {
-        res.send(data.toString());
+app.get('/', function(req, res) {
+    fs.readFile('HTMLPage.html', 'utf8', function(err, data) {
+        res.send(data);
     });
 });
 
-app.get('/seats', function(req, res, next) {
+app.get('/seats', function(req, res) {
     res.send(seats);
 });
 
