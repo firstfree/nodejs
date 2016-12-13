@@ -79,7 +79,7 @@ io.sockets.on('connection', function(socket) {
         io.sockets.emit('count', {
             index: index,
             count: products[index].count
-        })
+        });
     });
 
     socket.on('return', function(index) {
