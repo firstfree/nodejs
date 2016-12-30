@@ -1,0 +1,9 @@
+{
+  "name": "aeffe-nmt",
+  "version": "0.0.1",
+  "description": "Node Module Test",
+  "author": "aeffe-nmt",
+  "bin": {
+    "aeffe-nmt": "./aeffe-nmt"
+  }
+}
